@@ -1,27 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-        crossorigin="anonymous"></script>
-        <!-- Option 1: Include in HTML -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 </head>
-
+<style>
+    .flip-box {
+        width: 200px;
+        height: 200px;
+        perspective: 1000px;
+    }
+    
+    .flip-box-inner {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.5s;
+        transform-style: preserve-3d;
+    }
+    
+    .flip-box:hover .flip-box-inner {
+        transform: rotateY(180deg);
+    }
+    
+    .flip-box-front,
+    .flip-box-back {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        backface-visibility: hidden;
+    }
+    
+    .flip-box-front {
+        background-color: #3498db;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .flip-box-back {
+        background-color: #e74c3c;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: rotateY(180deg);
+    }
+</style>
 <body>
-
-
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="">WEBPAGE</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -33,15 +68,17 @@
                         <a class="nav-link" href="./aboutus.html">About Us</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-bs-toggle="dropdown"
-                            role="button" aria-expanded="false" href="./contactus.html">Contact Us</a>
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-bs-toggle="dropdown" role="button" aria-expanded="false" href="./contactus.html">Contact Us</a>
                         <ul class="dropdown-menu">
                             <li>
                                 <a class="dropdown-item">Privacy Policy</a>
                             </li>
-                            <li> <a class="dropdown-item">Retrun Policy</a></li>
-                            <li> <a class="dropdown-item">Acceptance Policy</a></li>
-
+                            <li>
+                                <a class="dropdown-item">Return Policy</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item">Acceptance Policy</a>
+                            </li>
                         </ul>
                     </li>
                 </ul>
@@ -51,30 +88,245 @@
                     &nbsp;&nbsp;&nbsp;
                     <button class="btn btn-outline-danger" type="submit">Search</button>
                 </form>
-  
-
-
             </div>
         </div>
     </nav>
+    <div class="container">
+        <div class="jumbotron bg-image" style="margin-right:70px;background-image: url('./images.jpg');height: 300px; width: 300%;">
+            <h1 class="text-white">Bootstrap Tutorial</h1>
+            <p class="text-white">Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile-first projects on the web.</p>
+        </div>
+        <p>This is some text.</p>
+        <p>This is another text.</p>
+    </div>
+
+
     <div class="row">
         <div class="col-md-12">
             <img src="./images.jpg" height="300px" width="1390px">
-            <H1>This is our first webpage</H1>        </div>
-
+            <h1>This is our first webpage</h1>
+        </div>
     </div>
-
 
     <div class="row">
         <div class="col-md-4 bg-primary">
-            
-            <!-- <img src=""> -->
-               <div class="text-center m-4">
-            <i class="bi-alarm"></i></div>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat, veniam recusandae. Labore esse illo rem quisquam, laudantium doloremque. Dolore earum ipsam eligendi nobis ipsum. Molestiae veniam similique minus sit repellendus.</div>
-        <div class="col-md-4 bg-danger">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat pariatur deleniti consectetur quisquam sapiente non autem. Non dolore unde perspiciatis. Porro quos ipsam nulla cum quod nesciunt sed rem laboriosam.</div>
-        <div class="col-md-4 bg-success">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam necessitatibus illo quisquam earum sit. Voluptatibus unde veritatis qui saepe porro, perferendis velit! Quaerat recusandae, autem delectus aliquid omnis eum? Laudantium.</div>
+            <div class="text-center m-4">
+                <i class="bi-alarm"></i>
+            </div>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat, veniam recusandae. Labore esse illo rem quisquam, laudantium doloremque. Dolore earum ipsam eligendi nobis ipsum. Molestiae veniam similique minus sit repellendus.
+            </p>
+        </div>
+        <div class="col-md-4 bg-danger">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat pariatur deleniti consectetur quisquam sapiente non autem. Non dolore unde perspiciatis. Porro quos ipsam nulla cum quod nesciunt sed rem laboriosam.
+            </p>
+        </div>
+        <div class="col-md-4 bg-success">
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam necessitatibus illo quisquam earum sit. Voluptatibus unde veritatis qui saepe porro, perferendis velit! Quaerat recusandae, autem delectus aliquid omnis eum? Laudantium.
+            </p>
+        </div>
     </div>
-</body>
 
+    <div class="container mt-5">
+        <h1>Accordion and Bootstrap Modal Contact Form</h1>
+    
+        <!-- Accordion -->
+        <div class="accordion" id="accordionExample">
+            <!-- Section 1 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="section1">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                        Section 1
+                    </button>
+                </h2>
+                <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="section1" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        Content for Section 1 goes here.
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Section 2 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="section2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                        Section 2
+                    </button>
+                </h2>
+                <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="section2" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        Content for Section 2 goes here.
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Section 3 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="section3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                        Section 3
+                    </button>
+                </h2>
+                <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="section3" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        Content for Section 3 goes here.
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Button to open Modal -->
+        <button type="button" class="btn btn-primary mt-4" data-bs-toggle="modal" data-bs-target="#contactModal">
+            Open Contact Modal
+        </button>
+    
+        <!-- Bootstrap Modal - Contact Form -->
+        <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="contactModalLabel">Contact Us</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Your Contact Form Goes Here -->
+                        <form>
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="Your Name">
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="Your Email">
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control" id="message" rows="4" placeholder="Your Message"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Send Message</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000">
+            <img src="./images.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>First slide label</h5>
+              <p>Some representative placeholder content for the first slide.</p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="./images.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Second slide label</h5>
+              <p>Some representative placeholder content for the second slide.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="./images.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Third slide label</h5>
+              <p>Some representative placeholder content for the third slide.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <section id="learn" class="p-5 bg-dark text-light">
+        <div class="container">
+          <div class="row align-items-center justify-content-between">
+            <div class="col-md p-5">
+              <h2>Learn React</h2>
+              <p class="lead">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Similique deleniti possimus magnam corporis ratione facere!
+              </p>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque
+                reiciendis eius autem eveniet mollitia, at asperiores suscipit
+                quae similique laboriosam iste minus placeat odit velit quos,
+                nulla architecto amet voluptates?
+              </p>
+              <a href="#" class="btn btn-light mt-3">
+                <i class="bi bi-chevron-right"></i> Read More
+              </a>
+            </div>
+            <div class="col-md">
+              <img src="./bootstrap/img/react.svg" class="img-fluid" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="col-md-3">
+        <div class="card bg-dark text-light">
+          <div class="card-body text-center">
+            <div class="h1 mb-3">
+              <i class="bi bi-laptop"></i>
+            </div>
+            <h3 class="card-title mb-3">Virtual</h3>
+            <p class="card-text">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Iure, quas quidem possimus dolorum esse eligendi?
+            </p>
+            <a href="#" class="btn btn-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="container mt-5">
+        <div class="flip-box">
+            <div class="flip-box-inner">
+                <div class="flip-box-front">
+                    <h2>Front Side</h2>
+                    <p>Hover to flip</p>
+                </div>
+                <div class="flip-box-back">
+                    <h2>Back Side</h2>
+                    <p>This is the back of the card</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="newsletter-form">
+            <h2>Subscribe to Our Newsletter</h2>
+            <p>Get the latest updates and news delivered to your inbox.</p>
+            <form>
+                <div class="form-group">
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                </div>
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+        </div>
+    </div>
+    <!-- Footer Section -->
+    <footer class="bg-dark text-light text-center py-3">
+        <p>&copy; 2023 Your Company Name. All Rights Reserved.</p>
+        <p>Address: 123 Main Street, City, Country</p>
+        <p>Email: info@yourcompany.com</p>
+    </footer>
+    
+</body>
 </html>
